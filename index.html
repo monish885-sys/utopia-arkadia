@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=Cinzel:wght@700;900&family=Pinyon+Script&display=swap" rel="stylesheet" />
+<script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
 
 <style>
 :root {
@@ -603,10 +604,10 @@ body { padding-bottom: 88px; }
     <a href="#top" class="nav__brand chrome" data-text="ARKADIA" aria-label="ARKADIA home">ARKADIA</a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#night">The Night</a>
-      <a href="#register">Register</a>
+      <a href="#pass">Pass</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#register" class="btn btn--primary">Pay ₹500</a>
+    <a href="#pass" class="btn btn--primary">Pass · ₹500</a>
   </div>
 </header>
 
@@ -654,7 +655,7 @@ body { padding-bottom: 88px; }
       </div>
 
       <div class="hero__cta reveal" style="--delay:.3s">
-        <a href="#register" class="btn btn--primary">Register · ₹500</a>
+        <a href="#pass" class="btn btn--primary">Pass · ₹500</a>
         <a href="#night" class="btn btn--ghost">See the Night</a>
       </div>
 
@@ -730,35 +731,35 @@ body { padding-bottom: 88px; }
         <div class="chips night__chips"><span class="chip">Complimentary</span><span class="chip chip--cyan">By Utopia</span></div>
         <p class="night__note">After freshers interaction, Utopia hosts a complimentary DJ night for SOAD &amp; SOS.</p>
         <div class="freq__cta" style="margin-top:28px">
-          <a href="#register" class="btn btn--primary">Register · ₹500</a>
+          <a href="#pass" class="btn btn--primary">Pass · ₹500</a>
         </div>
         <div class="label" data-spaced>Enter Arkadia</div>
       </div>
     </div>
   </section>
 
-  <section class="section reg" id="register">
+  <section class="section reg" id="pass">
     <div class="wrap">
       <div class="section__head reveal">
-        <div class="label">Entry Pass</div>
-        <h2 class="headline">Register<br />&amp; Pay</h2>
+        <div class="label">₹500</div>
+        <h2 class="headline">Pass</h2>
         <div class="rule2"></div>
-        <p class="section__lede">Verify your student number and phone, then pay ₹500 via UPI. No gateway fees.</p>
+        <p class="section__lede">Enter your student number and phone to get your pass.</p>
       </div>
 
       <div class="reg__frame frame reveal">
         <div class="reg__price">
-          <div class="chips"><span class="chip chip--sm">Pass</span><span class="chip chip--sm chip--cyan">One Night</span></div>
+          <div class="chips"><span class="chip chip--sm">Pass</span><span class="chip chip--sm chip--cyan">₹500</span></div>
           <div class="reg__amount"><small>₹</small>500</div>
-          <div class="label label--magenta">UPI · GPay · PhonePe · Paytm</div>
+          <div class="label label--magenta">UPI · Cards · Net Banking</div>
         </div>
 
-        <form class="reg__form" id="reg-form" novalidate>
+        <form class="reg__form" id="pass-form" novalidate>
           <div class="reg__fields">
             <div class="field">
               <label for="student-id">Student number</label>
               <input id="student-id" name="studentId" type="text" inputmode="numeric" autocomplete="off" placeholder="26XXXXXXXX" maxlength="16" required aria-describedby="student-hint student-err" />
-              <p class="field__hint" id="student-hint">Must start with <strong>26</strong> (batch 2026)</p>
+              <p class="field__hint" id="student-hint">Must start with <strong>26</strong></p>
               <p class="field__err" id="student-err" role="alert"></p>
             </div>
             <div class="field">
@@ -769,25 +770,23 @@ body { padding-bottom: 88px; }
             </div>
           </div>
           <div class="reg__actions">
-            <button type="submit" class="btn btn--primary" id="pay-btn">Pay ₹500 with UPI</button>
+            <button type="submit" class="btn btn--primary" id="pay-btn">Get Pass · ₹500</button>
           </div>
-          <p class="reg__note">Your student number is added to the UPI note so Utopia can match the payment.</p>
+          <p class="reg__note">Secure checkout · your student number is saved with the payment.</p>
           <div class="reg__setup" id="pay-setup" hidden>
-            <strong>Organiser setup needed:</strong> set your club UPI ID in <code>PAYMENT.upiId</code> near the bottom of <code>index.html</code> (example: <code>utopia@oksbi</code>). Until then, students cannot complete payment.
+            <strong>Organiser setup:</strong> add your Razorpay <code>keyId</code> (and optional payment link) in <code>PAYMENT</code> at the bottom of <code>index.html</code>. Personal UPI cannot take 400 payments — Razorpay can.
           </div>
         </form>
 
-        <div class="reg__done" id="reg-done" aria-live="polite">
-          <div class="label">Almost there</div>
-          <h3 class="headline">Open UPI<br />&amp; Pay</h3>
+        <div class="reg__done" id="pass-done" aria-live="polite">
+          <div class="label">Confirmed</div>
+          <h3 class="headline">Pass<br />Secured</h3>
           <div class="rule2"></div>
-          <p class="section__lede" style="margin-top:16px">Your UPI app should open with ₹500. Complete the payment, then keep the screenshot.</p>
-          <div class="reg__receipt" id="reg-receipt"></div>
+          <p class="section__lede" style="margin-top:16px">Keep this payment ID at the gate.</p>
+          <div class="reg__receipt" id="pass-receipt"></div>
           <div class="reg__actions">
-            <a class="btn btn--primary" id="reopen-upi" href="#">Open UPI again</a>
-            <button type="button" class="btn btn--ghost" id="reg-reset">Register another</button>
+            <button type="button" class="btn btn--ghost" id="pass-reset">Get another pass</button>
           </div>
-          <p class="reg__note">If UPI did not open, copy the UPI ID from the receipt and pay ₹500 manually with your student number in the note.</p>
         </div>
       </div>
     </div>
@@ -795,7 +794,7 @@ body { padding-bottom: 88px; }
 </main>
 
 <div class="sticky-pay" aria-hidden="false">
-  <a href="#register" class="btn btn--primary">Register · Pay ₹500</a>
+  <a href="#pass" class="btn btn--primary">Pass · ₹500</a>
 </div>
 
 <footer class="footer" id="contact">
@@ -935,24 +934,30 @@ body { padding-bottom: 88px; }
 })();
 
 /* ---------------------------------------------------------------------------
-   Register + UPI pay (₹500). Zero gateway fees — money goes straight to the
-   club UPI ID. Edit PAYMENT.upiId before sharing the link with students.
+   Pass · ₹500 via Razorpay (handles 400+ payments).
+   Personal UPI (~20 txn/day) cannot collect this volume — do not use it.
+   Setup: free Razorpay account → KYC → paste Key ID below.
+   Optional: also paste a ₹500 Payment Link as backup.
+   Fee is Razorpay's standard ~2% (~₹10 per pass) — needed at this scale.
    --------------------------------------------------------------------------- */
 (function () {
   const PAYMENT = {
     amountInr: 500,
-    // TODO: put Utopia's real UPI ID here (GPay / PhonePe / bank UPI)
-    upiId: '',
-    payeeName: 'Utopia Arkadia',
-    notePrefix: 'ARKADIA'
+    name: 'Arkadia',
+    description: 'Pass',
+    // TODO: Razorpay Dashboard → Account & Settings → API Keys → Key ID
+    keyId: '',
+    // TODO optional backup: Payment Links → create ₹500 link → paste URL
+    paymentLink: '',
+    themeColor: '#ff2ee6'
   };
 
-  const form = document.getElementById('reg-form');
-  const done = document.getElementById('reg-done');
-  const receipt = document.getElementById('reg-receipt');
+  const form = document.getElementById('pass-form');
+  const done = document.getElementById('pass-done');
+  const receipt = document.getElementById('pass-receipt');
   const setup = document.getElementById('pay-setup');
-  const reopen = document.getElementById('reopen-upi');
-  const resetBtn = document.getElementById('reg-reset');
+  const resetBtn = document.getElementById('pass-reset');
+  const payBtn = document.getElementById('pay-btn');
   const studentInput = document.getElementById('student-id');
   const phoneInput = document.getElementById('phone');
   const studentErr = document.getElementById('student-err');
@@ -960,9 +965,9 @@ body { padding-bottom: 88px; }
 
   if (!form) return;
 
-  if (!PAYMENT.upiId || /REPLACE|TODO|your.?upi/i.test(PAYMENT.upiId)) {
-    setup.hidden = false;
-  }
+  const hasKey = PAYMENT.keyId && /^rzp_(live|test)_/.test(PAYMENT.keyId);
+  const hasLink = PAYMENT.paymentLink && /^https?:\/\//.test(PAYMENT.paymentLink);
+  if (!hasKey && !hasLink) setup.hidden = false;
 
   function digitsOnly(v) { return String(v || '').replace(/\D/g, ''); }
 
@@ -998,34 +1003,77 @@ body { padding-bottom: 88px; }
     setFieldState(phoneInput, phoneErr, validatePhone(phoneInput.value));
   });
 
-  function buildUpiUrl(studentId, phone) {
-    const params = new URLSearchParams({
-      pa: PAYMENT.upiId,
-      pn: PAYMENT.payeeName,
-      am: String(PAYMENT.amountInr),
-      cu: 'INR',
-      tn: PAYMENT.notePrefix + ' ' + studentId + ' ' + phone
-    });
-    return 'upi://pay?' + params.toString();
-  }
-
-  let lastUpi = '';
-
-  function showDone(studentId, phone, upiUrl) {
+  function showSuccess(studentId, phone, paymentId) {
     form.classList.add('is-off');
     done.classList.add('is-on');
     receipt.innerHTML =
+      '<div>Pass <b>₹' + PAYMENT.amountInr + '</b></div>' +
       '<div>Student <b>' + studentId + '</b></div>' +
       '<div>Phone <b>' + phone + '</b></div>' +
-      '<div>Amount <b>₹' + PAYMENT.amountInr + '</b></div>' +
-      (PAYMENT.upiId ? '<div>UPI <b>' + PAYMENT.upiId + '</b></div>' : '');
-    reopen.href = upiUrl;
-    lastUpi = upiUrl;
+      (paymentId ? '<div>Payment ID <b>' + paymentId + '</b></div>' : '');
     try {
-      localStorage.setItem('arkadia_reg', JSON.stringify({
-        studentId, phone, amount: PAYMENT.amountInr, at: new Date().toISOString()
+      localStorage.setItem('arkadia_pass', JSON.stringify({
+        studentId, phone, amount: PAYMENT.amountInr, paymentId: paymentId || null, at: new Date().toISOString()
       }));
     } catch (_) {}
+    done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function openRazorpayCheckout(studentId, phone) {
+    if (typeof Razorpay === 'undefined') {
+      if (hasLink) {
+        redirectPaymentLink(studentId, phone);
+        return;
+      }
+      alert('Checkout is still loading. Try again in a second.');
+      payBtn.disabled = false;
+      payBtn.textContent = 'Get Pass · ₹500';
+      return;
+    }
+
+    const options = {
+      key: PAYMENT.keyId,
+      amount: PAYMENT.amountInr * 100,
+      currency: 'INR',
+      name: PAYMENT.name,
+      description: PAYMENT.description,
+      prefill: { contact: phone },
+      notes: {
+        pass: 'ARKADIA',
+        student_number: studentId,
+        phone: phone
+      },
+      theme: { color: PAYMENT.themeColor },
+      modal: {
+        ondismiss: function () {
+          payBtn.disabled = false;
+          payBtn.textContent = 'Get Pass · ₹500';
+        }
+      },
+      handler: function (response) {
+        showSuccess(studentId, phone, response.razorpay_payment_id);
+        payBtn.disabled = false;
+        payBtn.textContent = 'Get Pass · ₹500';
+      }
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.on('payment.failed', function () {
+      payBtn.disabled = false;
+      payBtn.textContent = 'Get Pass · ₹500';
+      alert('Payment failed. Please try again.');
+    });
+    rzp.open();
+  }
+
+  function redirectPaymentLink(studentId, phone) {
+    try {
+      sessionStorage.setItem('arkadia_pass_pending', JSON.stringify({ studentId, phone, at: Date.now() }));
+    } catch (_) {}
+    const url = new URL(PAYMENT.paymentLink);
+    url.searchParams.set('student_number', studentId);
+    url.searchParams.set('contact', phone);
+    window.location.href = url.toString();
   }
 
   form.addEventListener('submit', function (e) {
@@ -1038,21 +1086,17 @@ body { padding-bottom: 88px; }
       (!okStudent ? studentInput : phoneInput).focus();
       return;
     }
-    if (!PAYMENT.upiId || /REPLACE|TODO|your.?upi/i.test(PAYMENT.upiId)) {
+    if (!hasKey && !hasLink) {
       setup.hidden = false;
       setup.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       return;
     }
-    const upiUrl = buildUpiUrl(student.value, phone.value);
-    showDone(student.value, phone.value, upiUrl);
-    // Open native UPI apps on phone (GPay / PhonePe / Paytm / BHIM)
-    window.location.href = upiUrl;
-  });
 
-  reopen.addEventListener('click', function (e) {
-    if (!lastUpi) return;
-    e.preventDefault();
-    window.location.href = lastUpi;
+    payBtn.disabled = true;
+    payBtn.textContent = 'Opening checkout…';
+
+    if (hasKey) openRazorpayCheckout(student.value, phone.value);
+    else redirectPaymentLink(student.value, phone.value);
   });
 
   resetBtn.addEventListener('click', function () {
@@ -1063,8 +1107,23 @@ body { padding-bottom: 88px; }
     phoneErr.textContent = '';
     studentInput.classList.remove('is-invalid');
     phoneInput.classList.remove('is-invalid');
+    payBtn.disabled = false;
+    payBtn.textContent = 'Get Pass · ₹500';
     studentInput.focus();
   });
+
+  (function restoreFromQuery() {
+    const params = new URLSearchParams(location.search);
+    const paymentId = params.get('razorpay_payment_id') || params.get('payment_id');
+    if (!paymentId) return;
+    let pending = null;
+    try { pending = JSON.parse(sessionStorage.getItem('arkadia_pass_pending') || 'null'); } catch (_) {}
+    const studentId = (pending && pending.studentId) || params.get('student_number') || '—';
+    const phone = (pending && pending.phone) || params.get('contact') || '—';
+    showSuccess(studentId, phone, paymentId);
+    try { sessionStorage.removeItem('arkadia_pass_pending'); } catch (_) {}
+    history.replaceState(null, '', location.pathname + '#pass');
+  })();
 })();
 </script>
 </body>

@@ -58,9 +58,13 @@ Tone: short, uppercase, poster-like.
 - [ ] `og:image` for link previews once the site is hosted
 
 ## Payments
-- Pass is **₹500** via **UPI intent** (GPay / PhonePe / Paytm) — no gateway fees.
+- Pass is **₹500**.
+- **Do not use personal UPI** for ~400 buyers (daily credit limits ~20).
+- Use **Razorpay Checkout** (`PAYMENT.keyId`) — handles volume; ~2% fee.
+- Optional backup: `PAYMENT.paymentLink`.
 - Registration only collects **student number** (must start with `26`) and **phone**.
-- Do not invent a UPI ID. Leave the setup banner until organisers paste theirs.
+- Student-facing copy should only say **Pass** (not register / ticket tiers).
+- Never commit Razorpay Key Secret.
 
 ## Scaling up (only if asked)
 For registrations, payments or an admin dashboard, convert to **Next.js (App Router)**. Keep tokens/classes as global CSS and split sections into components, then deploy on Vercel.
