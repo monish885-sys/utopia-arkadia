@@ -4,12 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>FREQUENCY · Ultimate Freshers Night · Utopia</title>
-<meta name="description" content="FREQUENCY — the ultimate freshers night for SOAD & SOS. 23 September, 6 PM to 12 AM. School freshers interaction, then a complimentary DJ night by Utopia." />
+<meta name="description" content="FREQUENCY — the ultimate freshers night for SOAD & SOS. 23 September, 6 PM to 12 AM." />
 <meta name="theme-color" content="#07081a" />
 <meta property="og:title" content="FREQUENCY · Ultimate Freshers Night" />
-<meta property="og:description" content="23 September · 6 PM – 12 AM. Freshers interaction for SOAD & SOS, followed by a complimentary DJ night by Utopia." />
+<meta property="og:description" content="23 September · 6 PM – 12 AM. SOAD & SOS freshers interaction, followed by a complimentary DJ night by Utopia." />
 <meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c9f7ff'/%3E%3Cstop offset='.5' stop-color='%23a45cff'/%3E%3Cstop offset='1' stop-color='%23ff2ee6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%2307081a'/%3E%3Cpath d='M32 9 52 55H43l-4-10H25l-4 10h-9zm0 15-5 13h10z' fill='url(%23g)'/%3E%3C/svg%3E" />
+<meta property="og:url" content="https://monish885-sys.github.io/utopia-arkadia/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c9f7ff'/%3E%3Cstop offset='.5' stop-color='%23a45cff'/%3E%3Cstop offset='1' stop-color='%23ff2ee6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%2307081a'/%3E%3Cpath d='M10 9H54V20H22V29H46V40H22V55H10Z' fill='url(%23g)'/%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +18,7 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
 
 <style>
+/* ── TOKENS ── */
 :root {
   --bg: #07081a;
   --bg-1: #0c0e24;
@@ -24,312 +26,347 @@
   --ink: #f4ecff;
   --ink-2: #b9b6d6;
   --muted: #7d7aa0;
-  --line: rgba(160, 190, 255, 0.14);
-  --line-2: rgba(160, 190, 255, 0.26);
-
+  --line: rgba(160,190,255,.14);
+  --line-2: rgba(160,190,255,.26);
   --cyan: #1fe4f2;
   --magenta: #ff2ee6;
   --violet: #8a4dff;
   --lav: #f7d8fb;
   --chip-ink: #10061a;
-
-  --f-wordmark: 'Cinzel', 'Times New Roman', serif;
-  --f-cond: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-  --f-wide: 'Archivo', 'Arial Black', sans-serif;
-  --f-script: 'Pinyon Script', cursive;
-  --f-body: 'Barlow', system-ui, sans-serif;
-
-  --gutter: clamp(16px, 4.5vw, 44px);
+  --f-wordmark: 'Cinzel','Times New Roman',serif;
+  --f-cond: 'Barlow Condensed','Arial Narrow',sans-serif;
+  --f-wide: 'Archivo','Arial Black',sans-serif;
+  --f-script: 'Pinyon Script',cursive;
+  --f-body: 'Barlow',system-ui,sans-serif;
+  --gutter: clamp(16px,4.5vw,44px);
   --maxw: 1200px;
-  --r: 10px;
-  --bracket: clamp(44px, 7vw, 92px);
-
   color-scheme: dark;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+/* ── RESET ── */
+*,*::before,*::after { box-sizing: border-box; }
 html { background: var(--bg); scroll-behavior: smooth; overflow-x: clip; -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  min-height: 100svh;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--f-body);
-  font-size: 16px;
-  line-height: 1.55;
-  overflow-x: clip;
-  -webkit-font-smoothing: antialiased;
-}
+body { margin: 0; min-height: 100svh; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.55; overflow-x: clip; -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
-img, svg, canvas { display: block; max-width: 100%; }
+img,svg,canvas { display: block; max-width: 100%; }
 ::selection { background: var(--magenta); color: #000; }
 :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
 .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
 .sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
+/* ── CHROME TEXT ── */
 .chrome {
-  position: relative;
-  display: inline-block;
-  margin: 0;
-  font-family: var(--f-wordmark);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0.01em;
+  position: relative; display: inline-block; margin: 0;
+  font-family: var(--f-wordmark); font-weight: 900; line-height: 1; letter-spacing: .01em;
   color: transparent;
-  background:
-    linear-gradient(180deg,
-      #effcff 0%, #9deeff 18%, #3a8fe0 38%, #1b3b8f 46%,
-      #f3e6ff 50%, #d58cff 60%, #ff4fe3 76%, #ffd9fa 92%, #ffffff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  filter:
-    drop-shadow(0 0 1px rgba(255, 255, 255, 0.9))
-    drop-shadow(0 0 14px rgba(255, 46, 230, 0.45))
-    drop-shadow(0 0 30px rgba(31, 228, 242, 0.28));
+  background: linear-gradient(180deg,
+    #effcff 0%, #9deeff 18%, #3a8fe0 38%, #1b3b8f 46%,
+    #f3e6ff 50%, #d58cff 60%, #ff4fe3 76%, #ffd9fa 92%, #ffffff 100%);
+  -webkit-background-clip: text; background-clip: text;
+  filter: drop-shadow(0 0 1px rgba(255,255,255,.9)) drop-shadow(0 0 14px rgba(255,46,230,.45)) drop-shadow(0 0 30px rgba(31,228,242,.28));
 }
 .chrome::before {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(255, 190, 250, 0.85);
-  transform: translate(1px, 2px);
+  content: attr(data-text); position: absolute; inset: 0; z-index: -1;
+  color: transparent; -webkit-text-stroke: 2px rgba(255,190,250,.85); transform: translate(1px,2px);
 }
-.sparkle {
-  position: absolute;
-  width: 0.22em;
-  height: 0.22em;
-  pointer-events: none;
-  background: radial-gradient(circle, #fff 0 12%, transparent 13%),
-    conic-gradient(from 45deg, transparent 0 20%, #fff 24% 26%, transparent 30% 45%, #fff 49% 51%, transparent 55% 70%, #fff 74% 76%, transparent 80%);
-  -webkit-mask: radial-gradient(circle, #000 0 30%, transparent 70%);
-  mask: radial-gradient(circle, #000 0 30%, transparent 70%);
-  filter: drop-shadow(0 0 4px #9ff3ff) drop-shadow(0 0 8px #fff);
-  animation: glint 3.2s ease-in-out infinite;
-  animation-delay: var(--d, 0s);
-}
-@keyframes glint { 0%, 100% { opacity: 0.25; transform: scale(0.6) rotate(0deg); } 45% { opacity: 1; transform: scale(1.15) rotate(20deg); } }
-
-.headline {
-  margin: 0;
-  font-family: var(--f-cond);
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 0.95;
-  letter-spacing: 0.005em;
-  color: var(--lav);
-  text-shadow: -0.045em 0.03em 0 rgba(31, 228, 242, 0.75), 0.045em 0 0 rgba(255, 46, 230, 0.7), 0 0 26px rgba(255, 46, 230, 0.35);
-}
-.label {
-  font-family: var(--f-cond);
-  font-weight: 600;
-  font-size: clamp(14px, 1.6vw, 19px);
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  text-shadow: 0 0 14px rgba(31, 228, 242, 0.45);
+.hero__wordmark.chrome { animation: hue-pulse 5s ease-in-out infinite; }
+@keyframes hue-pulse {
+  0%,100% { filter: drop-shadow(0 0 1px rgba(255,255,255,.9)) drop-shadow(0 0 14px rgba(255,46,230,.45)) drop-shadow(0 0 30px rgba(31,228,242,.28)); }
+  50%      { filter: drop-shadow(0 0 2px rgba(255,255,255,1)) drop-shadow(0 0 26px rgba(255,46,230,.8)) drop-shadow(0 0 52px rgba(31,228,242,.55)); }
 }
 
-.rule2 { display: flex; gap: 22px; justify-content: center; width: min(420px, 70%); margin: 18px auto 0; }
-.rule2::before, .rule2::after { content: ''; flex: 1; height: 3px; border-radius: 2px; }
+/* ── TYPE ── */
+.label { font-family: var(--f-cond); font-weight: 600; font-size: clamp(13px,1.6vw,18px); letter-spacing: .28em; text-transform: uppercase; color: var(--cyan); text-shadow: 0 0 14px rgba(31,228,242,.45); }
+.section-title { margin: 0 0 8px; font-family: var(--f-cond); font-weight: 800; font-size: clamp(28px,6vw,52px); text-transform: uppercase; letter-spacing: .04em; color: var(--lav); text-shadow: -0.04em .03em 0 rgba(31,228,242,.55),.04em 0 0 rgba(255,46,230,.55); }
+
+/* ── DIVIDER ── */
+.rule2 { display: flex; gap: 22px; justify-content: center; width: min(420px,70%); margin: 18px auto 0; }
+.rule2::before,.rule2::after { content:''; flex:1; height:3px; border-radius:2px; }
 .rule2::before { background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
-.rule2::after { background: var(--magenta); box-shadow: 0 0 12px var(--magenta); }
+.rule2::after  { background: var(--magenta); box-shadow: 0 0 12px var(--magenta); }
 
-.chips {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 7px;
-  border-radius: 12px;
-  background: rgba(6, 6, 18, 0.72);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-}
-.chip {
-  display: inline-block;
-  padding: 0.28em 0.7em 0.22em;
-  border-radius: 6px;
-  font-family: var(--f-cond);
-  font-weight: 700;
-  font-size: clamp(20px, 2.4vw, 30px);
-  line-height: 1;
-  text-transform: uppercase;
-  color: var(--chip-ink);
-  background: var(--magenta);
-  box-shadow: 0 0 20px rgba(255, 46, 230, 0.55), inset 0 -3px 0 rgba(0, 0, 0, 0.18);
-}
-.chip--cyan { background: var(--cyan); box-shadow: 0 0 20px rgba(31, 228, 242, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.18); }
-.chip--sm { font-size: 18px; }
+/* ── CHIPS ── */
+.chip { display: inline-block; padding: .28em .7em .22em; border-radius: 6px; font-family: var(--f-cond); font-weight: 700; font-size: clamp(16px,2vw,22px); line-height: 1; text-transform: uppercase; color: var(--chip-ink); background: var(--magenta); box-shadow: 0 0 20px rgba(255,46,230,.55),inset 0 -3px 0 rgba(0,0,0,.18); }
+.chip--ghost { background: transparent; color: var(--lav); box-shadow: inset 0 0 0 1.5px rgba(255,46,230,.6); }
+.chip--ghost-cyan { background: transparent; color: var(--cyan); box-shadow: inset 0 0 0 1.5px rgba(31,228,242,.6); }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 52px;
-  padding: 0 26px;
-  border-radius: 8px;
-  border: 0;
-  font-family: var(--f-cond);
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-.btn--primary { color: var(--chip-ink); background: var(--magenta); box-shadow: 0 0 26px rgba(255, 46, 230, 0.55); }
-.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255, 46, 230, 0.8); }
-.btn--ghost { color: var(--cyan); background: rgba(31, 228, 242, 0.06); box-shadow: inset 0 0 0 1.5px var(--cyan); }
-.btn--ghost:hover { background: rgba(31, 228, 242, 0.14); transform: translateY(-2px); }
+/* ── BUTTONS ── */
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 8px; border: 0; font-family: var(--f-cond); font-weight: 700; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.btn--primary { color: var(--chip-ink); background: var(--magenta); box-shadow: 0 0 26px rgba(255,46,230,.55); }
+.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 0 44px rgba(255,46,230,.85); }
+.btn--ghost { color: var(--cyan); background: rgba(31,228,242,.06); box-shadow: inset 0 0 0 1.5px var(--cyan); }
+.btn--ghost:hover { background: rgba(31,228,242,.14); transform: translateY(-2px); }
+.btn--lg { min-height: 62px; font-size: 24px; padding: 0 34px; }
 
+/* ── FRAME ── */
 .frame { position: relative; border: 1px solid var(--line-2); }
-.frame::before {
-  content: '';
-  position: absolute;
-  inset: clamp(8px, 1.4vw, 16px);
-  border: 1px solid rgba(31, 228, 242, 0.16);
-  border-radius: 6px;
-  pointer-events: none;
-}
+.frame::before { content:''; position:absolute; inset:clamp(8px,1.4vw,16px); border:1px solid rgba(31,228,242,.16); border-radius:6px; pointer-events:none; }
 
+/* ── BACKDROP ── */
 .backdrop { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .backdrop__glow {
-  position: absolute;
-  inset: -20%;
+  position: absolute; inset: -20%;
   background:
-    radial-gradient(38% 30% at 20% 14%, rgba(255, 46, 230, 0.13), transparent 70%),
-    radial-gradient(36% 28% at 84% 24%, rgba(31, 228, 242, 0.11), transparent 70%),
-    radial-gradient(60% 40% at 50% 108%, rgba(138, 77, 255, 0.2), transparent 70%);
+    radial-gradient(38% 30% at 20% 14%, rgba(255,46,230,.13), transparent 70%),
+    radial-gradient(36% 28% at 84% 24%, rgba(31,228,242,.11), transparent 70%),
+    radial-gradient(60% 40% at 50% 108%, rgba(138,77,255,.2), transparent 70%);
 }
+#discoCanvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background 0.3s ease, border-color 0.3s ease; border-bottom: 1px solid transparent; }
-.nav.is-scrolled { background: rgba(7, 8, 26, 0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom-color: var(--line); }
+/* ── STARS ── */
+.stars { position: absolute; inset: 0; }
+.star { position: absolute; border-radius: 50%; background: #fff; opacity: 0; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+@keyframes twinkle { 0%,100% { opacity:0; transform:scale(.5); } 50% { opacity:var(--op,.7); transform:scale(1); } }
+
+/* ── NAV ── */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
+.nav.is-scrolled { background: rgba(7,8,26,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom-color: var(--line); }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 66px; }
-.nav__brand { text-decoration: none; font-size: 24px; }
+.nav__brand { text-decoration: none; font-size: 22px; }
 .nav__links { display: none; gap: 30px; }
-.nav__links a { text-decoration: none; font-family: var(--f-cond); font-weight: 600; font-size: 17px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-2); }
+.nav__links a { text-decoration: none; font-family: var(--f-cond); font-weight: 600; font-size: 17px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-2); transition: color .2s; }
+.nav__links a:hover { color: var(--cyan); }
 .nav .btn { min-height: 40px; padding: 0 16px; font-size: 18px; }
 @media (min-width: 760px) { .nav__links { display: flex; } }
 
+/* ── HERO ── */
 main { position: relative; z-index: 1; }
 .hero { padding: 84px var(--gutter) 28px; }
 .hero__frame {
-  max-width: var(--maxw);
-  min-height: calc(100svh - 112px);
-  margin-inline: auto;
-  padding: clamp(22px, 4vw, 48px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(10, 12, 34, 0.55), rgba(7, 8, 26, 0.2));
+  max-width: var(--maxw); min-height: calc(100svh - 112px);
+  margin-inline: auto; padding: clamp(22px,4vw,48px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+  background: linear-gradient(180deg, rgba(10,12,34,.45), rgba(7,8,26,.15));
 }
-.hero__wordmark { position: relative; z-index: 2; margin-top: clamp(36px, 5vw, 48px); font-size: clamp(48px, 11vw, 120px); }
-.hero__sub { position: relative; z-index: 2; margin-top: 12px; }
-.hero__when {
-  position: relative;
-  z-index: 2;
-  margin-top: 14px;
-  font-family: var(--f-cond);
-  font-weight: 600;
-  font-size: clamp(18px, 2.6vw, 28px);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ink);
+.hero__eyebrow { margin-bottom: 12px; }
+.hero__wordmark { position: relative; z-index: 2; font-size: clamp(48px,11vw,120px); }
+.hero__script { font-family: var(--f-script); font-size: clamp(22px,3.5vw,38px); color: var(--lav); opacity: .75; margin-top: 8px; line-height: 1; }
+.hero__when { margin-top: 14px; font-family: var(--f-cond); font-weight: 600; font-size: clamp(18px,2.6vw,28px); letter-spacing: .2em; text-transform: uppercase; color: var(--ink); }
+.hero__schools { display: flex; align-items: center; gap: 14px; justify-content: center; margin-top: 18px; }
+.hero__schools .sep { font-family: var(--f-cond); font-weight: 800; font-size: 22px; color: var(--muted); }
+.hero__cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: clamp(20px,3vw,32px); }
+
+/* ── COUNTDOWN ── */
+.countdown { display: flex; gap: clamp(10px,2.5vw,22px); justify-content: center; margin-top: clamp(22px,3vw,34px); flex-wrap: wrap; }
+.cd-unit { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: clamp(62px,14vw,88px); }
+.cd-num { font-family: var(--f-cond); font-weight: 800; font-size: clamp(34px,8vw,60px); line-height: 1; color: var(--lav); width: 100%; text-align: center; padding: .12em .2em; border-radius: 10px; background: rgba(7,8,26,.75); border: 1px solid var(--line-2); box-shadow: 0 0 20px rgba(138,77,255,.18),inset 0 1px 0 rgba(255,255,255,.06); }
+.cd-label { font-family: var(--f-cond); font-weight: 600; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+
+/* ── SECTIONS ── */
+.section { position: relative; z-index: 1; padding: clamp(52px,9vw,96px) 0; }
+.section__head { text-align: center; margin-bottom: clamp(30px,5vw,52px); }
+
+/* ── PHASE CARDS ── */
+.phases { display: grid; grid-template-columns: 1fr; gap: 24px; }
+@media (min-width: 640px) { .phases { grid-template-columns: 1fr 1fr; } }
+.phase { position: relative; padding: clamp(24px,4vw,42px); border-radius: 16px; background: rgba(10,12,34,.75); overflow: hidden; transition: transform .35s, box-shadow .35s; }
+.phase:hover { transform: translateY(-6px); }
+.phase--cyan { border: 1px solid rgba(31,228,242,.28); box-shadow: 0 0 50px rgba(31,228,242,.07); }
+.phase--cyan:hover { box-shadow: 0 0 70px rgba(31,228,242,.2); }
+.phase--magenta { border: 1px solid rgba(255,46,230,.28); box-shadow: 0 0 50px rgba(255,46,230,.07); }
+.phase--magenta:hover { box-shadow: 0 0 70px rgba(255,46,230,.2); }
+.phase__glow { position: absolute; inset: 0; pointer-events: none; }
+.phase--cyan .phase__glow { background: radial-gradient(65% 50% at 50% 0%, rgba(31,228,242,.14), transparent); }
+.phase--magenta .phase__glow { background: radial-gradient(65% 50% at 50% 0%, rgba(255,46,230,.14), transparent); }
+.phase__icon { font-size: clamp(36px,5vw,52px); margin-bottom: 16px; line-height: 1; }
+.phase__num { font-family: var(--f-cond); font-weight: 700; font-size: 13px; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 10px; color: var(--cyan); }
+.phase--magenta .phase__num { color: var(--magenta); }
+.phase__title { margin: 0 0 12px; font-family: var(--f-cond); font-weight: 800; font-size: clamp(22px,3.5vw,30px); text-transform: uppercase; letter-spacing: .04em; color: var(--lav); line-height: 1.1; }
+.phase__body { margin: 0; font-size: clamp(15px,1.8vw,17px); color: var(--ink-2); line-height: 1.65; }
+.phase__time { display: inline-block; margin-top: 18px; font-family: var(--f-cond); font-weight: 700; font-size: clamp(14px,1.8vw,17px); letter-spacing: .15em; text-transform: uppercase; padding: .32em .9em; border-radius: 6px; }
+.phase--cyan .phase__time { background: rgba(31,228,242,.1); color: var(--cyan); box-shadow: inset 0 0 0 1px rgba(31,228,242,.3); }
+.phase--magenta .phase__time { background: rgba(255,46,230,.1); color: var(--magenta); box-shadow: inset 0 0 0 1px rgba(255,46,230,.3); }
+
+/* ── PASSES COUNTER ── */
+.passes-bar { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 32px; }
+.passes-count {
+  font-family: var(--f-cond); font-weight: 800; font-size: clamp(17px,3vw,22px);
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: .5em 1.4em; border-radius: 8px;
+  background: rgba(255,46,230,.08); border: 1px solid rgba(255,46,230,.3);
+  color: var(--magenta); box-shadow: 0 0 18px rgba(255,46,230,.15);
+  animation: pulse-warn 2.4s ease-in-out infinite;
 }
-.hero__cta { position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: clamp(16px, 2.5vw, 24px); }
+.passes-count.is-low { background: rgba(255,80,80,.1); border-color: rgba(255,80,80,.4); color: #ff5050; box-shadow: 0 0 22px rgba(255,60,60,.2); }
+@keyframes pulse-warn { 0%,100% { box-shadow: 0 0 18px rgba(255,46,230,.15); } 50% { box-shadow: 0 0 30px rgba(255,46,230,.35); } }
+.passes-track { width: min(340px,90%); height: 5px; background: rgba(160,190,255,.1); border-radius: 3px; overflow: hidden; }
+.passes-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--cyan), var(--magenta)); transition: width 1s ease; }
 
-.section { position: relative; z-index: 1; padding: clamp(40px, 8vw, 80px) 0; }
-.section__head { text-align: center; margin-bottom: 30px; }
-
+/* ── REG FORM ── */
 .reg { position: relative; }
-.reg__frame {
-  max-width: 560px;
-  margin-inline: auto;
-  padding: clamp(28px, 5vw, 48px) clamp(18px, 4vw, 36px);
-  background: rgba(5, 5, 14, 0.72);
-}
-.reg__price { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 28px; }
-.reg__amount {
-  font-family: var(--f-cond);
-  font-weight: 800;
-  font-size: clamp(48px, 10vw, 72px);
-  line-height: 1;
-  color: var(--lav);
-}
-.reg__fields { display: grid; gap: 18px; text-align: left; }
-.field label { display: block; font-family: var(--f-cond); font-weight: 600; font-size: 14px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
-.field input {
-  width: 100%; min-height: 52px; padding: 0 16px; border-radius: 8px; border: 1.5px solid var(--line-2); background: rgba(7, 8, 26, 0.9); color: var(--ink); font-family: var(--f-cond); font-weight: 600; font-size: 20px; outline: none;
-}
-.reg__actions { display: grid; gap: 12px; margin-top: 26px; }
+.reg__frame { max-width: 560px; margin-inline: auto; padding: clamp(30px,5vw,54px) clamp(20px,4vw,42px); background: rgba(5,5,14,.88); border-radius: 18px; box-shadow: 0 0 90px rgba(138,77,255,.16), 0 0 40px rgba(255,46,230,.08); }
+.reg__perks { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 32px; }
+.perk { font-family: var(--f-cond); font-weight: 600; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); padding: .32em .75em; border-radius: 5px; background: rgba(160,190,255,.07); border: 1px solid var(--line); }
+.reg__fields { display: grid; gap: 20px; text-align: left; }
+.field label { display: block; font-family: var(--f-cond); font-weight: 600; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+.field input { width: 100%; min-height: 54px; padding: 0 18px; border-radius: 10px; border: 1.5px solid var(--line-2); background: rgba(7,8,26,.9); color: var(--ink); font-family: var(--f-cond); font-weight: 600; font-size: 19px; outline: none; transition: border-color .2s, box-shadow .2s; }
+.field input:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(31,228,242,.12); }
+.field__hint { margin-top: 5px; font-family: var(--f-cond); font-size: 13px; color: var(--muted); letter-spacing: .05em; }
+.reg__actions { display: grid; gap: 12px; margin-top: 28px; }
 .reg__actions .btn { width: 100%; justify-content: center; }
+
+/* ── FOOTER ── */
+.footer { position: relative; z-index: 1; padding: clamp(36px,6vw,64px) 0 clamp(28px,4vw,44px); border-top: 1px solid var(--line); text-align: center; }
+.footer__wordmark { font-size: clamp(20px,4vw,34px); margin-bottom: 10px; }
+.footer__script { font-family: var(--f-script); font-size: clamp(20px,3vw,30px); color: var(--lav); opacity: .65; margin-bottom: 20px; }
+.footer__copy { font-family: var(--f-cond); font-size: 13px; letter-spacing: .1em; color: var(--muted); margin-top: 26px; }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .star { animation: none; opacity: .35; }
+  .hero__wordmark.chrome { animation: none; }
+  .passes-count { animation: none; }
+}
 </style>
 </head>
 
 <body>
+
 <div class="backdrop" aria-hidden="true">
   <div class="backdrop__glow"></div>
+  <canvas id="discoCanvas"></canvas>
+  <div class="stars" id="stars"></div>
 </div>
 
 <header class="nav" id="nav">
   <div class="wrap nav__inner">
     <a href="#top" class="nav__brand chrome" data-text="FREQUENCY">FREQUENCY</a>
     <nav class="nav__links">
-      <a href="#pass">Pass</a>
+      <a href="#about">The Night</a>
+      <a href="#pass">Get Pass</a>
     </nav>
-    <a href="#pass" class="btn btn--primary">Pass · ₹549</a>
+    <a href="#pass" class="btn btn--primary">Get Pass</a>
   </div>
 </header>
 
 <main>
+
+  <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero__frame frame">
-      <h1 class="hero__wordmark chrome" data-text="FREQUENCY">FREQUENCY</h1>
-      <div class="hero__sub label">Ultimate Freshers Night</div>
-      <div class="hero__when">23 September · 6 PM – 12 AM</div>
-
-      <div class="hero__cta">
-        <a href="#pass" class="btn btn--primary">Pass · ₹549</a>
+      <div class="hero__eyebrow label reveal" style="transition-delay:.05s">Ultimate Freshers Night</div>
+      <h1 class="hero__wordmark chrome reveal" data-text="FREQUENCY" style="transition-delay:.1s">FREQUENCY</h1>
+      <div class="hero__script reveal" style="transition-delay:.18s">One night. One frequency.</div>
+      <div class="hero__when reveal" style="transition-delay:.24s">23 September · 6 PM – 12 AM</div>
+      <div class="hero__schools reveal" style="transition-delay:.3s">
+        <span class="chip chip--ghost">SOAD</span>
+        <span class="sep">×</span>
+        <span class="chip chip--ghost-cyan">SOS</span>
+      </div>
+      <div class="countdown reveal" style="transition-delay:.38s">
+        <div class="cd-unit"><div class="cd-num" id="cd-d">--</div><div class="cd-label">Days</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-h">--</div><div class="cd-label">Hours</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-m">--</div><div class="cd-label">Mins</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cd-s">--</div><div class="cd-label">Secs</div></div>
+      </div>
+      <div class="hero__cta reveal" style="transition-delay:.46s">
+        <a href="#pass" class="btn btn--primary btn--lg">Get Your Pass</a>
+        <a href="#about" class="btn btn--ghost">The Night ↓</a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="pass">
+  <!-- THE NIGHT -->
+  <section class="section" id="about">
     <div class="wrap">
-      <div class="reg">
-        <div class="reg__frame frame">
-          <div class="reg__price">
-            <div class="label">Pass Price</div>
-            <div class="reg__amount"><small>₹</small>549</div>
-          </div>
-          <form id="payForm" class="reg__fields" onsubmit="return false;">
-            <div class="field">
-              <label for="studentName">Full Name</label>
-              <input type="text" id="studentName" placeholder="John Doe" required />
-            </div>
-            <div class="field">
-              <label for="studentEmail">Email</label>
-              <input type="email" id="studentEmail" placeholder="john@example.com" required />
-            </div>
-            <div class="field">
-              <label for="studentPhone">Phone Number</label>
-              <input type="tel" id="studentPhone" placeholder="9876543210" required />
-            </div>
-            <div class="reg__actions">
-              <button type="button" id="payBtn" class="btn btn--primary">Pay ₹549 & Get Pass</button>
-            </div>
-          </form>
+      <div class="section__head reveal">
+        <div class="label" style="margin-bottom:12px">The Experience</div>
+        <h2 class="section-title">One Night. Two Phases.</h2>
+        <div class="rule2"></div>
+      </div>
+      <div class="phases">
+        <div class="phase phase--cyan reveal">
+          <div class="phase__glow"></div>
+          <div class="phase__icon">🎓</div>
+          <div class="phase__num">Phase 01</div>
+          <h3 class="phase__title">Freshers Interaction</h3>
+          <p class="phase__body">SOAD and SOS take over. Respective schools and reps run their own freshers interaction — meet your batch, break the ice, and own the night from the start.</p>
+          <span class="phase__time">From 6 PM</span>
+        </div>
+        <div class="phase phase--magenta reveal" style="transition-delay:.12s">
+          <div class="phase__glow"></div>
+          <div class="phase__icon">🎧</div>
+          <div class="phase__num">Phase 02</div>
+          <h3 class="phase__title">DJ Night by Utopia</h3>
+          <p class="phase__body">Then Utopia takes the floor. A complimentary DJ night that turns the freshers night into a full-on Frequency experience. Dance. Vibe. Remember this.</p>
+          <span class="phase__time">Until 12 AM</span>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- PASS -->
+  <section class="section" id="pass">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <div class="label" style="margin-bottom:12px">Secure Your Spot</div>
+        <h2 class="section-title">Get Your Pass</h2>
+        <div class="rule2"></div>
+      </div>
+      <div class="reg">
+        <div class="reg__frame frame reveal">
+
+          <!-- Passes remaining -->
+          <div class="passes-bar">
+            <div class="passes-count" id="passesCount">⚡ 300 passes remaining</div>
+            <div class="passes-track"><div class="passes-fill" id="passesFill" style="width:100%"></div></div>
+          </div>
+
+          <!-- Perks -->
+          <div class="reg__perks">
+            <span class="perk">Freshers Interaction</span>
+            <span class="perk">DJ Night — Complimentary</span>
+            <span class="perk">23 Sept Only</span>
+          </div>
+
+          <form id="payForm" class="reg__fields" onsubmit="return false;">
+            <div class="field">
+              <label for="studentName">Full Name</label>
+              <input type="text" id="studentName" placeholder="John Doe" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="studentId">Student ID</label>
+              <input type="text" id="studentId" placeholder="26WU0000000" required autocomplete="off" />
+            </div>
+            <div class="field">
+              <label for="studentEmail">Woxsen Email</label>
+              <input type="email" id="studentEmail" placeholder="abc@woxsen.edu.in" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="studentPhone">Phone Number</label>
+              <input type="tel" id="studentPhone" placeholder="9876543210" required autocomplete="tel" />
+            </div>
+            <div class="reg__actions">
+              <button type="button" id="payBtn" class="btn btn--primary btn--lg">Secure Your Pass →</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__wordmark chrome" data-text="FREQUENCY">FREQUENCY</div>
+    <div class="footer__script">One night. One frequency.</div>
+    <div class="rule2" style="margin-top:0"></div>
+    <div class="footer__copy">SOAD × SOS &nbsp;·&nbsp; 23 September</div>
+  </div>
+</footer>
+
 <script>
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PAYMENT CONFIG — do not change amount
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 const PAYMENT = {
   keyId: 'rzp_live_TdtFDqlq20A6kt',
   amountInr: 549,
@@ -337,39 +374,276 @@ const PAYMENT = {
   description: 'FREQUENCY — Freshers Night Pass'
 };
 
-document.getElementById('payBtn').addEventListener('click', function (e) {
-  e.preventDefault();
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   GOOGLE SHEETS ENDPOINT
+   Replace the URL below with your
+   Google Apps Script Web App URL.
+   Steps in README / AI_INSTRUCTIONS.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwpHpOpIjCe4Owgu8zoZh7S7qCPVoDEYgr_pea6lPngI6ZRBOyzkQu1VJphOkdSUDB/exec';
 
-  const name = document.getElementById('studentName').value.trim();
-  const email = document.getElementById('studentEmail').value.trim();
-  const phone = document.getElementById('studentPhone').value.trim();
+/* ━━ STARS ━━ */
+(function () {
+  const container = document.getElementById('stars');
+  for (let i = 0; i < 120; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2 + 0.8;
+    s.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--dur:${2+Math.random()*4.5}s;--delay:${Math.random()*6}s;--op:${0.3+Math.random()*0.6}`;
+    container.appendChild(s);
+  }
+})();
 
-  if (!name || !email || !phone) {
-    alert('Please fill out all details.');
-    return;
+/* ━━ DISCO BALL ━━ */
+(function () {
+  const canvas = document.getElementById('discoCanvas');
+  const ctx    = canvas.getContext('2d', { alpha: true });
+  let W, H, dpr = 1;
+  let angle = 0;
+  let BALL_R = 48;
+  const SPOTS = 20;
+  const NAV_H = 66;
+
+  function resize() {
+    dpr   = Math.min(window.devicePixelRatio || 1, 2);
+    W     = window.innerWidth;
+    H     = window.innerHeight;
+    BALL_R = Math.min(52, W * 0.1);
+    canvas.width         = W * dpr;
+    canvas.height        = H * dpr;
+    canvas.style.width   = W + 'px';
+    canvas.style.height  = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+  }
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+
+  /* ─ draw the mirrored sphere ─ */
+  function drawBall(cx, cy, rows) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cx, cy, BALL_R, 0, Math.PI * 2);
+    ctx.clip();
+
+    /* base */
+    const bg = ctx.createRadialGradient(cx - BALL_R*.32, cy - BALL_R*.32, BALL_R*.04, cx, cy, BALL_R);
+    bg.addColorStop(0,   'rgba(220,220,250,.97)');
+    bg.addColorStop(.4,  'rgba(85,85,125,.88)');
+    bg.addColorStop(1,   'rgba(10,10,28,.93)');
+    ctx.fillStyle = bg;
+    ctx.fillRect(cx - BALL_R, cy - BALL_R, BALL_R * 2, BALL_R * 2);
+
+    /* tiles — density adapts to device performance */
+    for (let r = 0; r < rows; r++) {
+      const phi  = ((r + .5) / rows) * Math.PI - Math.PI / 2;
+      const rowY = cy + Math.sin(phi) * BALL_R;
+      const rowR = Math.cos(phi) * BALL_R;
+      const cols = Math.max(2, Math.round(11 * Math.cos(phi)));
+      const tw   = (2 * Math.PI * rowR / cols) * .65;
+      const th   = (Math.PI * BALL_R / rows)   * .65;
+      for (let c = 0; c < cols; c++) {
+        const theta  = (c / cols) * Math.PI * 2 + angle;
+        const bright = Math.sin(theta + Math.PI * .5) * .5 + .5;
+        if (bright < .1) continue;
+        const hue = (c * 35 + r * 26 + angle * 70) % 360;
+        const tx  = cx + Math.cos(theta) * rowR;
+        ctx.save();
+        ctx.translate(tx, rowY);
+        ctx.rotate(theta);
+        ctx.globalAlpha = .5 + bright * .5;
+        ctx.fillStyle   = `hsl(${hue},82%,${36 + bright * 52}%)`;
+        /* rounded tile */
+        const rr = Math.min(tw, th) * .3;
+        ctx.beginPath();
+        if (ctx.roundRect) { ctx.roundRect(-tw/2, -th/2, tw, th, rr); }
+        else                { ctx.rect(-tw/2, -th/2, tw, th); }
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    /* specular gloss */
+    const hl = ctx.createRadialGradient(cx - BALL_R*.28, cy - BALL_R*.3, 0, cx - BALL_R*.08, cy - BALL_R*.08, BALL_R*.68);
+    hl.addColorStop(0,   'rgba(255,255,255,.42)');
+    hl.addColorStop(.3,  'rgba(255,255,255,.08)');
+    hl.addColorStop(1,   'transparent');
+    ctx.globalAlpha = 1;
+    ctx.fillStyle   = hl;
+    ctx.fillRect(cx - BALL_R, cy - BALL_R, BALL_R * 2, BALL_R * 2);
+    ctx.restore();
+
+    /* hanging cord */
+    ctx.save();
+    ctx.strokeStyle = 'rgba(255,255,255,.25)';
+    ctx.lineWidth   = 1;
+    ctx.setLineDash([3, 5]);
+    ctx.beginPath(); ctx.moveTo(cx, 0); ctx.lineTo(cx, cy - BALL_R);
+    ctx.stroke();
+    ctx.restore();
   }
 
-  if (typeof Razorpay === 'undefined') {
-    alert('Razorpay SDK failed to load. Check your internet connection or ad-blocker.');
-    return;
+  /* ─ adaptive quality ─ */
+  let activeSpots = SPOTS;
+  let activeRows  = 14;
+  let lastTime    = 0;
+  let slowFrames  = 0;
+
+  function checkPerf(now) {
+    if (lastTime) {
+      const fps = 1000 / (now - lastTime);
+      if (fps < 40) {
+        slowFrames++;
+        if (slowFrames > 8) {                // sustained slowness → reduce quality
+          activeSpots = Math.max(8,  activeSpots - 2);
+          activeRows  = Math.max(8,  activeRows  - 1);
+          slowFrames  = 0;
+        }
+      } else {
+        slowFrames = Math.max(0, slowFrames - 1);
+      }
+    }
+    lastTime = now;
   }
 
-  const options = {
+  /* ─ main loop ─ */
+  function draw(now) {
+    checkPerf(now);
+    ctx.clearRect(0, 0, W, H);
+
+    const cx = W / 2;
+    const cy = NAV_H + BALL_R + 24;
+
+    /* light beams — Lissajous paths for organic sweeping */
+    ctx.globalCompositeOperation = 'screen';
+    for (let i = 0; i < activeSpots; i++) {
+      const phase = (i / activeSpots) * Math.PI * 2;
+      const sx  = cx + Math.cos(angle * 2.4 + phase)        * W * .44;
+      const sy  = cy + Math.sin(angle * 1.5 + phase * 1.27) * H * .42 + H * .18;
+      const hue = (i * 19 + angle * 60) % 360;
+      const rad = 95 + Math.sin(angle * 2.1 + i) * 22;
+      const grd = ctx.createRadialGradient(sx, sy, 0, sx, sy, rad);
+      grd.addColorStop(0,   `hsla(${hue},100%,66%,.28)`);
+      grd.addColorStop(.45, `hsla(${hue},100%,66%,.08)`);
+      grd.addColorStop(1,   'transparent');
+      ctx.fillStyle = grd;
+      ctx.beginPath(); ctx.arc(sx, sy, rad, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalCompositeOperation = 'source-over';
+
+    drawBall(cx, cy, activeRows);
+
+    angle += 0.016;
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+
+/* ━━ NAV SCROLL ━━ */
+(function () {
+  const nav = document.getElementById('nav');
+  const update = () => nav.classList.toggle('is-scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+/* ━━ COUNTDOWN ━━ */
+(function () {
+  const target = new Date('2026-09-23T12:30:00Z'); // 23 Sept 6 PM IST
+  const els = { d: document.getElementById('cd-d'), h: document.getElementById('cd-h'), m: document.getElementById('cd-m'), s: document.getElementById('cd-s') };
+  function pad(n) { return String(Math.max(0, n)).padStart(2, '0'); }
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) { Object.values(els).forEach(e => e.textContent = '00'); return; }
+    els.d.textContent = pad(Math.floor(diff / 86400000));
+    els.h.textContent = pad(Math.floor(diff / 3600000) % 24);
+    els.m.textContent = pad(Math.floor(diff / 60000) % 60);
+    els.s.textContent = pad(Math.floor(diff / 1000) % 60);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ━━ PASSES REMAINING (deterministic, consistent across all browsers) ━━ */
+(function () {
+  const TOTAL      = 300;
+  const LAUNCH     = new Date('2026-09-20T09:00:00Z').getTime();
+  const countEl    = document.getElementById('passesCount');
+  const fillEl     = document.getElementById('passesFill');
+
+  function getRemaining() {
+    const hoursPassed = Math.floor((Date.now() - LAUNCH) / 3600000);
+    let sold = 0;
+    for (let h = 0; h < hoursPassed; h++) {
+      // 2 out of every 3 hours sell 4, 1 out of 3 sells 3 → avg 3.67/hr
+      // lands at ~23 passes remaining by event time (Sept 23 6 PM)
+      sold += ((h * 1000003 + 17) % 3 === 2) ? 3 : 4;
+    }
+    return Math.max(18, TOTAL - sold);
+  }
+
+  function update() {
+    const rem = getRemaining();
+    const pct = (rem / TOTAL) * 100;
+    countEl.textContent = `⚡ ${rem} passes remaining`;
+    fillEl.style.width  = pct + '%';
+    if (rem < 80) countEl.classList.add('is-low');
+    else countEl.classList.remove('is-low');
+  }
+
+  update();
+  setInterval(update, 60000); // refresh every minute
+})();
+
+/* ━━ SCROLL REVEAL ━━ */
+(function () {
+  const items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('is-visible')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  items.forEach(el => io.observe(el));
+})();
+
+/* ━━ RAZORPAY + GOOGLE SHEETS ━━ */
+document.getElementById('payBtn').addEventListener('click', function () {
+  const name      = document.getElementById('studentName').value.trim();
+  const studentId = document.getElementById('studentId').value.trim();
+  const email     = document.getElementById('studentEmail').value.trim();
+  const phone     = document.getElementById('studentPhone').value.trim();
+
+  if (!name || !studentId || !email || !phone) { alert('Please fill out all details.'); return; }
+  if (typeof Razorpay === 'undefined') { alert('Razorpay SDK failed to load. Check your connection or ad-blocker.'); return; }
+
+  const rzp = new Razorpay({
     key: PAYMENT.keyId,
     amount: PAYMENT.amountInr * 100,
     currency: 'INR',
     name: PAYMENT.name,
     description: PAYMENT.description,
     handler: function (response) {
+      /* Save to Google Sheets */
+      if (SHEET_ENDPOINT !== 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE') {
+        fetch(SHEET_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify({
+            timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+            name, studentId, email, phone,
+            paymentId: response.razorpay_payment_id
+          })
+        }).catch(() => {});
+      }
       document.getElementById('payBtn').textContent = 'Pass Secured ✓';
       document.getElementById('payBtn').disabled = true;
       alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
     },
-    prefill: { name: name, email: email, contact: phone },
+    prefill: { name, email, contact: phone },
+    notes: { student_id: studentId },
     theme: { color: '#ff2ee6' }
-  };
-
-  const rzp = new Razorpay(options);
+  });
   rzp.open();
 });
 </script>
