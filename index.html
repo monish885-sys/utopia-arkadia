@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>ARKADIA · Ultimate Freshers Night · Utopia</title>
-<meta name="description" content="ARKADIA — the ultimate freshers night for SOAD & SOS. 23 September, 6 PM to 12 AM. School freshers interaction, then a complimentary DJ night by Utopia." />
+<title>FREQUENCY · Ultimate Freshers Night · Utopia</title>
+<meta name="description" content="FREQUENCY — the ultimate freshers night for SOAD & SOS. 23 September, 6 PM to 12 AM. School freshers interaction, then a complimentary DJ night by Utopia." />
 <meta name="theme-color" content="#07081a" />
-<meta property="og:title" content="ARKADIA · Ultimate Freshers Night" />
+<meta property="og:title" content="FREQUENCY · Ultimate Freshers Night" />
 <meta property="og:description" content="23 September · 6 PM – 12 AM. Freshers interaction for SOAD & SOS, followed by a complimentary DJ night by Utopia." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c9f7ff'/%3E%3Cstop offset='.5' stop-color='%23a45cff'/%3E%3Cstop offset='1' stop-color='%23ff2ee6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%2307081a'/%3E%3Cpath d='M32 9 52 55H43l-4-10H25l-4 10h-9zm0 15-5 13h10z' fill='url(%23g)'/%3E%3C/svg%3E" />
@@ -277,23 +277,23 @@ main { position: relative; z-index: 1; }
 
 <header class="nav" id="nav">
   <div class="wrap nav__inner">
-    <a href="#top" class="nav__brand chrome" data-text="ARKADIA">ARKADIA</a>
+    <a href="#top" class="nav__brand chrome" data-text="FREQUENCY">FREQUENCY</a>
     <nav class="nav__links">
       <a href="#pass">Pass</a>
     </nav>
-    <a href="#pass" class="btn btn--primary">Pass · ₹500</a>
+    <a href="#pass" class="btn btn--primary">Pass · ₹549</a>
   </div>
 </header>
 
 <main>
   <section class="hero" id="top">
     <div class="hero__frame frame">
-      <h1 class="hero__wordmark chrome" data-text="ARKADIA">ARKADIA</h1>
+      <h1 class="hero__wordmark chrome" data-text="FREQUENCY">FREQUENCY</h1>
       <div class="hero__sub label">Ultimate Freshers Night</div>
       <div class="hero__when">23 September · 6 PM – 12 AM</div>
 
       <div class="hero__cta">
-        <a href="#pass" class="btn btn--primary">Pass · ₹500</a>
+        <a href="#pass" class="btn btn--primary">Pass · ₹549</a>
       </div>
     </div>
   </section>
@@ -304,7 +304,7 @@ main { position: relative; z-index: 1; }
         <div class="reg__frame frame">
           <div class="reg__price">
             <div class="label">Pass Price</div>
-            <div class="reg__amount"><small>₹</small>500</div>
+            <div class="reg__amount"><small>₹</small>549</div>
           </div>
           <form id="payForm" class="reg__fields" onsubmit="return false;">
             <div class="field">
@@ -320,7 +320,7 @@ main { position: relative; z-index: 1; }
               <input type="tel" id="studentPhone" placeholder="9876543210" required />
             </div>
             <div class="reg__actions">
-              <button type="button" id="payBtn" class="btn btn--primary">Pay ₹500 & Get Pass</button>
+              <button type="button" id="payBtn" class="btn btn--primary">Pay ₹549 & Get Pass</button>
             </div>
           </form>
         </div>
@@ -330,13 +330,19 @@ main { position: relative; z-index: 1; }
 </main>
 
 <script>
+const PAYMENT = {
+  keyId: 'rzp_live_TdtFDqlq20A6kt',
+  amountInr: 549,
+  name: 'Utopia',
+  description: 'FREQUENCY — Freshers Night Pass'
+};
+
 document.getElementById('payBtn').addEventListener('click', function (e) {
   e.preventDefault();
-  console.log("PAY BUTTON CLICKED!"); // Diagnostic log
 
-  const name = document.getElementById('studentName').value;
-  const email = document.getElementById('studentEmail').value;
-  const phone = document.getElementById('studentPhone').value;
+  const name = document.getElementById('studentName').value.trim();
+  const email = document.getElementById('studentEmail').value.trim();
+  const phone = document.getElementById('studentPhone').value.trim();
 
   if (!name || !email || !phone) {
     alert('Please fill out all details.');
@@ -355,6 +361,8 @@ document.getElementById('payBtn').addEventListener('click', function (e) {
     name: PAYMENT.name,
     description: PAYMENT.description,
     handler: function (response) {
+      document.getElementById('payBtn').textContent = 'Pass Secured ✓';
+      document.getElementById('payBtn').disabled = true;
       alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
     },
     prefill: { name: name, email: email, contact: phone },
