@@ -1,41 +1,41 @@
-# ARKADIA — Pass · ₹500
+# FREQUENCY / Arkadia — archived portfolio project
 
-Organised by Utopia for SOAD & SOS · **23 September · 6 PM – 12 AM**
+**Status:** Event finished · **GitHub Pages disabled** · **No live payments**
 
-**Public link:** https://monish885-sys.github.io/utopia-arkadia/
+Public repo for learning and portfolio: front-end event site, pass flow design, Razorpay + Google Sheets integration (removed from current source).
 
-## Can personal UPI take 400 × ₹500?
+**Repo:** https://github.com/monish885-sys/utopia-arkadia
 
-**No.** Personal UPI usually caps around ~20 credits/day. 400 passes need a **merchant checkout**.
+## What this was
 
-Use **Razorpay** (free to open, KYC once). It accepts UPI / cards / net banking at any volume. Standard fee is about **2% (~₹10 per pass)** — that fee is what makes 400 payments possible.
+Ultimate freshers night site for SOAD & SOS (23 September). Single-page HTML/CSS/JS with checkout and registration logging.
 
-## Setup (5 minutes)
+## What is turned off
 
-1. Sign up at [razorpay.com](https://razorpay.com) → complete KYC → activate Live mode.
-2. **Account & Settings → API Keys → Generate Key** → copy **Key ID** (`rzp_live_…`).
-3. Open `index.html`, find `PAYMENT.keyId`, paste the Key ID.
-4. (Optional backup) Create a **Payment Link** for ₹500 → paste into `PAYMENT.paymentLink`.
-5. Push / redeploy so students get the update.
+| Item | Action |
+| --- | --- |
+| Public website | GitHub Pages **deleted** — old URL should 404 |
+| Razorpay Key ID | **Removed** from `index.html` |
+| Google Apps Script URL | **Removed** from `index.html` |
+| Pass form | Replaced with “Sales closed” archive message |
 
-```js
-const PAYMENT = {
-  amountInr: 500,
-  keyId: 'rzp_live_xxxxxxxx',   // required
-  paymentLink: '',              // optional backup URL
-};
+## If you had a live Razorpay key in git history
+
+Old commits may still contain a Key ID. In [Razorpay Dashboard](https://dashboard.razorpay.com/) → **Account & Settings → API Keys**, **regenerate or revoke** the key that was committed so it cannot be used even if someone finds it in history.
+
+Also disable or delete the Google Apps Script web app deployment if you no longer need registrations.
+
+## Run locally (preview only)
+
+```bash
+python3 -m http.server 8080
 ```
 
-Never put the **Key Secret** in this file.
+Open http://localhost:8080 — design and animations only; no checkout.
 
-## Student flow
+## Stack (for portfolio notes)
 
-1. Opens the site on phone → **Pass · ₹500**
-2. Enters **student number** (must start with `26`) + **phone**
-3. Razorpay checkout opens → pays ₹500
-4. Site shows **Pass Secured** with payment ID (also in Razorpay dashboard notes)
-
-## Deploy
-
-Repo: https://github.com/monish885-sys/utopia-arkadia  
-Pages: https://monish885-sys.github.io/utopia-arkadia/
+- Static site (no build step)
+- Mobile-first UI, canvas disco backdrop
+- Razorpay Checkout (was live during the event)
+- Optional Google Sheets webhook for pass records

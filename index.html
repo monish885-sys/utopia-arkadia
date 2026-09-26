@@ -9,13 +9,11 @@
 <meta property="og:title" content="FREQUENCY · Ultimate Freshers Night" />
 <meta property="og:description" content="23 September · 6 PM – 12 AM. The ultimate freshers night for SOAD & SOS." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://monish885-sys.github.io/utopia-arkadia/" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c9f7ff'/%3E%3Cstop offset='.5' stop-color='%23a45cff'/%3E%3Cstop offset='1' stop-color='%23ff2ee6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='12' fill='%2307081a'/%3E%3Cpath d='M10 9H54V20H22V29H46V40H22V55H10Z' fill='url(%23g)'/%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=Cinzel:wght@700;900&family=Pinyon+Script&display=swap" rel="stylesheet" />
-<script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
 
 <style>
 /* ── TOKENS ── */
@@ -117,6 +115,31 @@ img,svg,canvas { display: block; max-width: 100%; }
 .stars { position: absolute; inset: 0; }
 .star { position: absolute; border-radius: 50%; background: #fff; opacity: 0; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
 @keyframes twinkle { 0%,100% { opacity:0; transform:scale(.5); } 50% { opacity:var(--op,.7); transform:scale(1); } }
+
+/* ── ARCHIVED BANNER ── */
+.archive-banner {
+  position: relative;
+  z-index: 60;
+  padding: 12px var(--gutter);
+  text-align: center;
+  font-family: var(--f-cond);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: linear-gradient(90deg, rgba(255,46,230,.22), rgba(31,228,242,.18));
+  border-bottom: 1px solid var(--line-2);
+}
+.archive-banner a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+.reg__archived {
+  text-align: center;
+  padding: clamp(24px, 5vw, 40px) clamp(16px, 4vw, 28px);
+  color: var(--ink-2);
+  font-size: 17px;
+  line-height: 1.55;
+}
+.reg__archived .section-title { margin-top: 12px; font-size: clamp(24px, 5vw, 36px); }
 
 /* ── NAV ── */
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
@@ -228,6 +251,11 @@ main { position: relative; z-index: 1; }
 
 <body>
 
+<p class="archive-banner" role="status">
+  Event concluded · Pass sales and payments are off ·
+  <a href="https://github.com/monish885-sys/utopia-arkadia">Source on GitHub</a>
+</p>
+
 <div class="backdrop" aria-hidden="true">
   <div class="backdrop__glow"></div>
   <canvas id="discoCanvas"></canvas>
@@ -239,9 +267,9 @@ main { position: relative; z-index: 1; }
     <a href="#top" class="nav__brand chrome" data-text="FREQUENCY">FREQUENCY</a>
     <nav class="nav__links">
       <a href="#about">The Night</a>
-      <a href="#pass">Get Pass</a>
+      <a href="https://github.com/monish885-sys/utopia-arkadia">Code</a>
     </nav>
-    <a href="#pass" class="btn btn--primary">Get Pass</a>
+    <a href="#about" class="btn btn--primary">The Night</a>
   </div>
 </header>
 
@@ -266,8 +294,8 @@ main { position: relative; z-index: 1; }
         <div class="cd-unit"><div class="cd-num" id="cd-s">--</div><div class="cd-label">Secs</div></div>
       </div>
       <div class="hero__cta reveal" style="transition-delay:.46s">
-        <a href="#pass" class="btn btn--primary btn--lg">Get Your Pass</a>
-        <a href="#about" class="btn btn--ghost">The Night ↓</a>
+        <a href="#about" class="btn btn--primary btn--lg">The Night ↓</a>
+        <a href="https://github.com/monish885-sys/utopia-arkadia" class="btn btn--ghost">View Code</a>
       </div>
     </div>
   </section>
@@ -305,48 +333,19 @@ main { position: relative; z-index: 1; }
   <section class="section" id="pass">
     <div class="wrap">
       <div class="section__head reveal">
-        <div class="label" style="margin-bottom:12px">Secure Your Spot</div>
-        <h2 class="section-title">Get Your Pass</h2>
+        <div class="label" style="margin-bottom:12px">Pass</div>
+        <h2 class="section-title">Pass</h2>
         <div class="rule2"></div>
       </div>
       <div class="reg">
         <div class="reg__frame frame reveal">
-
-          <!-- Passes remaining -->
-          <div class="passes-bar">
-            <div class="passes-count" id="passesCount">⚡ 300 passes remaining</div>
-            <div class="passes-track"><div class="passes-fill" id="passesFill" style="width:100%"></div></div>
+          <div class="reg__archived">
+            <div class="label">Pass</div>
+            <h3 class="section-title">Sales closed</h3>
+            <div class="rule2"></div>
+            <p style="margin-top:20px">FREQUENCY has ended. This page is kept as a portfolio piece — design, front-end, and payment integration (removed from the live build).</p>
+            <p style="margin-top:14px"><a href="https://github.com/monish885-sys/utopia-arkadia">github.com/monish885-sys/utopia-arkadia</a></p>
           </div>
-
-          <!-- Perks -->
-          <div class="reg__perks">
-            <span class="perk">Freshers Interaction</span>
-            <span class="perk">DJ Night</span>
-            <span class="perk">23 Sept Only</span>
-          </div>
-
-          <form id="payForm" class="reg__fields" onsubmit="return false;">
-            <div class="field">
-              <label for="studentName">Full Name</label>
-              <input type="text" id="studentName" placeholder="John Doe" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="studentId">Student ID</label>
-              <input type="text" id="studentId" placeholder="26WU0000000" required autocomplete="off" />
-            </div>
-            <div class="field">
-              <label for="studentEmail">Woxsen Email</label>
-              <input type="email" id="studentEmail" placeholder="abc@woxsen.edu.in" required autocomplete="email" />
-            </div>
-            <div class="field">
-              <label for="studentPhone">Phone Number</label>
-              <input type="tel" id="studentPhone" placeholder="9876543210" required autocomplete="tel" />
-            </div>
-            <div class="reg__actions">
-              <button type="button" id="payBtn" class="btn btn--primary btn--lg">Secure Your Pass →</button>
-            </div>
-          </form>
-
         </div>
       </div>
     </div>
@@ -364,23 +363,15 @@ main { position: relative; z-index: 1; }
 </footer>
 
 <script>
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   PAYMENT CONFIG — do not change amount
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* Site archived — event over. No payment keys or live endpoints in source. */
+const SITE_ARCHIVED = true;
 const PAYMENT = {
-  keyId: 'rzp_live_TdtFDqlq20A6kt',
+  keyId: '',
   amountInr: 549,
-  name: 'Utopia',
-  description: 'FREQUENCY — Freshers Night Pass'
+  name: 'FREQUENCY',
+  description: 'Pass'
 };
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   GOOGLE SHEETS ENDPOINT
-   Replace the URL below with your
-   Google Apps Script Web App URL.
-   Steps in README / AI_INSTRUCTIONS.
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwpHpOpIjCe4Owgu8zoZh7S7qCPVoDEYgr_pea6lPngI6ZRBOyzkQu1VJphOkdSUDB/exec';
+const SHEET_ENDPOINT = '';
 
 /* ━━ STARS ━━ */
 (function () {
@@ -556,44 +547,19 @@ const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwpHpOpIjCe4Owg
   function pad(n) { return String(Math.max(0, n)).padStart(2, '0'); }
   function tick() {
     const diff = target - Date.now();
-    if (diff <= 0) { Object.values(els).forEach(e => e.textContent = '00'); return; }
+    if (diff <= 0) {
+      els.d.textContent = '—';
+      els.h.textContent = '—';
+      els.m.textContent = '—';
+      els.s.textContent = '—';
+      return;
+    }
     els.d.textContent = pad(Math.floor(diff / 86400000));
     els.h.textContent = pad(Math.floor(diff / 3600000) % 24);
     els.m.textContent = pad(Math.floor(diff / 60000) % 60);
     els.s.textContent = pad(Math.floor(diff / 1000) % 60);
   }
   tick(); setInterval(tick, 1000);
-})();
-
-/* ━━ PASSES REMAINING (deterministic, consistent across all browsers) ━━ */
-(function () {
-  const TOTAL      = 300;
-  const LAUNCH     = new Date('2026-09-20T09:00:00Z').getTime();
-  const countEl    = document.getElementById('passesCount');
-  const fillEl     = document.getElementById('passesFill');
-
-  function getRemaining() {
-    const hoursPassed = Math.floor((Date.now() - LAUNCH) / 3600000);
-    let sold = 0;
-    for (let h = 0; h < hoursPassed; h++) {
-      // 2 out of every 3 hours sell 4, 1 out of 3 sells 3 → avg 3.67/hr
-      // lands at ~23 passes remaining by event time (Sept 23 6 PM)
-      sold += ((h * 1000003 + 17) % 3 === 2) ? 3 : 4;
-    }
-    return Math.max(18, TOTAL - sold);
-  }
-
-  function update() {
-    const rem = getRemaining();
-    const pct = (rem / TOTAL) * 100;
-    countEl.textContent = `⚡ ${rem} passes remaining`;
-    fillEl.style.width  = pct + '%';
-    if (rem < 80) countEl.classList.add('is-low');
-    else countEl.classList.remove('is-low');
-  }
-
-  update();
-  setInterval(update, 60000); // refresh every minute
 })();
 
 /* ━━ SCROLL REVEAL ━━ */
@@ -606,46 +572,7 @@ const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwpHpOpIjCe4Owg
   items.forEach(el => io.observe(el));
 })();
 
-/* ━━ RAZORPAY + GOOGLE SHEETS ━━ */
-document.getElementById('payBtn').addEventListener('click', function () {
-  const name      = document.getElementById('studentName').value.trim();
-  const studentId = document.getElementById('studentId').value.trim();
-  const email     = document.getElementById('studentEmail').value.trim();
-  const phone     = document.getElementById('studentPhone').value.trim();
-
-  if (!name || !studentId || !email || !phone) { alert('Please fill out all details.'); return; }
-  if (typeof Razorpay === 'undefined') { alert('Razorpay SDK failed to load. Check your connection or ad-blocker.'); return; }
-
-  const rzp = new Razorpay({
-    key: PAYMENT.keyId,
-    amount: PAYMENT.amountInr * 100,
-    currency: 'INR',
-    name: PAYMENT.name,
-    description: PAYMENT.description,
-    handler: function (response) {
-      /* Save to Google Sheets */
-      if (SHEET_ENDPOINT !== 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE') {
-        fetch(SHEET_ENDPOINT, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain' },
-          body: JSON.stringify({
-            timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-            name, studentId, email, phone,
-            paymentId: response.razorpay_payment_id
-          })
-        }).catch(() => {});
-      }
-      document.getElementById('payBtn').textContent = 'Pass Secured ✓';
-      document.getElementById('payBtn').disabled = true;
-      alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
-    },
-    prefill: { name, email, contact: phone },
-    notes: { student_id: studentId },
-    theme: { color: '#ff2ee6' }
-  });
-  rzp.open();
-});
+/* Payments disabled — SITE_ARCHIVED */
 </script>
 </body>
 </html>
